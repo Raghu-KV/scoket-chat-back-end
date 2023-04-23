@@ -18,7 +18,7 @@ const server = app.listen(PORT, () =>
   console.log(`working in the port:${PORT}`)
 );
 
-const FRONT_END_LINK = "http://localhost:3000";
+const FRONT_END_LINK = "https://inspiring-praline-5cc027.netlify.app";
 
 const io = new Server(server, {
   cors: {
