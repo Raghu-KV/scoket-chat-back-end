@@ -17,6 +17,7 @@ const FRONT_END_LINK = "http://localhost:3000";
 const io = new Server(server, {
   cors: {
     origin: FRONT_END_LINK,
+    methods: ["GET", "POST"],
   },
 });
 
