@@ -1,12 +1,14 @@
 import express from "express";
 import { Server } from "socket.io";
 import cors from "cors";
+import * as dotenv from "dotenv";
 
 const app = express();
+dotenv.config();
 
 app.use(cors());
 
-const PORT = 4000;
+const PORT = process.env.PORT;
 
 const server = app.listen(PORT, () =>
   console.log(`working in the port:${PORT}`)
