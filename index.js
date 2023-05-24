@@ -19,6 +19,7 @@ const server = app.listen(PORT, () =>
 );
 
 const FRONT_END_LINK = "https://inspiring-praline-5cc027.netlify.app";
+//const FRONT_END_LINK = "http://localhost:3000";
 
 const io = new Server(server, {
   cors: {
@@ -32,6 +33,7 @@ io.on("connection", (socket) => {
 
   socket.on("join_room", (roomNum) => {
     socket.join(roomNum);
+    socket.emit("joinded_successfully", { message: "connected" });
     console.log(`user ${socket.id} has joined the room: ${roomNum}`);
   });
 
